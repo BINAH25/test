@@ -1,0 +1,205 @@
+:root {
+  --color-bg: #d6d2dc;
+  --color-main: #301e4e;
+  --pink: #ff6e6c;
+  --fz-heading: 40px;
+}
+
+body {
+  background-color: #d6d2dc;
+  font-weight: 600;
+}
+
+header .logo {
+  width: clamp(8rem, 20vw, 12rem);
+}
+
+.top-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25rem;
+  background-color: var(--color-main);
+  padding-inline: 2rem;
+  color: #fff;
+  clip-path: ellipse(120% 100% at 53.5% 0%);
+}
+
+.big-heading {
+  font-size: clamp(32px, 6vw, var(--fz-heading));
+}
+
+.top-section .line {
+  position: absolute;
+  z-index: -1;
+  margin-top: 1px;
+}
+
+.top-section .line:last-of-type {
+  top: 1.8rem;
+  margin: 0;
+}
+
+.top-section h1 {
+  margin-block: 8rem 1rem;
+  font-weight: 800;
+  /* font-size: clamp(32px, 6vw, var(--fz-heading)); */
+}
+
+.top-section p {
+  text-align: center;
+}
+
+.question-container {
+  margin-top: -5rem;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.question-container h3 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding-right: 2rem;
+  /* font-size: 1rem; */
+}
+
+p {
+  font-size: 1rem;
+}
+
+.inner {
+  width: 90%;
+  max-width: 40rem;
+  background-color: #fff;
+  padding: 1rem;
+  margin: 0.7rem auto;
+  border-radius: 0.2rem;
+}
+
+.inner div {
+  padding-inline: 1rem;
+}
+
+.question {
+  color: var(--color-main);
+  position: relative;
+}
+
+.slide .question {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #737373;
+}
+
+.answer {
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+}
+
+.slide .answer {
+  margin-top: 1rem;
+  height: fit-content;
+}
+
+.question button {
+  border: none;
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  background-color: transparent;
+}
+
+button img {
+  width: 100%;
+}
+
+.slide button img {
+  transform: rotate(180deg);
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #f5f5f5;
+}
+
+.contact-section > div:first-of-type {
+  padding-top: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  margin-block: 0.5rem;
+}
+
+.form-container {
+  background-color: transparent;
+  padding: 3rem 1.5rem;
+  width: 100%;
+  max-width: 35rem;
+  margin-block: 0.5rem;
+}
+
+.form-container div {
+  margin-bottom: 0.5rem;
+}
+
+.contact-section h2 {
+  font-size: clamp(16px, 4vw, --fz-heading);
+  color: var(--pink);
+}
+
+.contact-section p {
+  margin-top: 1rem;
+}
+
+.form-container input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font-family: inherit;
+  color: #232946;
+  border: 1px solid #232946;
+  border-radius: 4px;
+  outline: none;
+  overflow: hidden;
+}
+
+.form-container input:focus,
+textarea:focus {
+  border: 2px solid var(--color-main);
+}
+
+.form-container button {
+  background-color: var(--color-main);
+  width: 50%;
+  border: none;
+  color: #fff;
+  padding: 0.8rem;
+  font-family: inherit;
+}
+
+.contact-section img {
+  height: 1.2rem;
+  position: absolute;
+}
+
+.inline p {
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-section .line {
+    display: none;
+  }
+}
