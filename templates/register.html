@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="{% static 'css/sign-up.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/header.css'%}" />
     <link rel="stylesheet" href="{% static 'css/footer.css'%}" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -98,13 +96,14 @@
     <footer>
         <section class="footer-first">
             <div>
-                <h4 class="logo">ChunkIT</h4>
+                <img class="logo" src="{% static 'assets/icons/footer-logo.png'%}" alt="" />
             </div>
+
             <div>
                 <ul class="nav-link">
-                    <li><a href="#">Resources</a></li>
+                    <li><a href="Front-end/documentation.html">Documentation</a></li>
                     <li><a href="{% url 'about'%}">About us</a></li>
-                    <li><a href="{% url 'faq' %}">Contact us</a></li>
+                    <li><a href="{% url 'faq'%}">Contact us</a></li>
                 </ul>
             </div>
         </section>

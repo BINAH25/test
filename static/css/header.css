@@ -2,7 +2,7 @@
   --color-bg: #f2f1f4;
   --color-main: #301e4e;
   --pink: #ff6e6c;
-  --fz-heading: 40px;
+  --fz-heading: 56px;
 }
 
 * {
@@ -20,15 +20,21 @@ header {
   width: 100%;
   background-color: #f2f1f4;
   padding-inline: 4rem;
-  position: relative;
+  position: fixed;
+  z-index: 9999;
 }
 
 header .logo {
   width: clamp(8rem, 20vw, 12rem);
+  /* width: 16rem; */
 }
 
-.big-heading {
+/* .big-heading {
   font-size: clamp(25px, 5vw, 40px);
+} */
+
+.big-heading {
+  font-size: clamp(32px, 6vw, var(--fz-heading));
 }
 
 .logo {
@@ -56,27 +62,32 @@ ul {
 
 .primary-navigation ul {
   display: flex;
-  gap: clamp(1rem, 4vw, 3rem);
+  gap: 3rem;
+  gap: clamp(0.5rem, 4vw, 3rem);
+  /* gap: 1rem; */
+  /* white-space: nowrap; */
+  /* justify-content: space-evenly; */
 }
 
 .primary-navigation a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-main);
 }
 
 .primary-navigation .nav-link a:hover {
   color: var(--pink);
-  cursor: pointer;
 }
 
 .header-action .btn-link {
   padding: 0.5rem 3rem;
-  padding-inline: clamp(0.5rem, 4vw, 3rem);
+  padding-inline: clamp(0.5rem, 3vw, 3rem);
   border-radius: 4px;
   font-family: inherit;
   border-radius: 4px;
   font-weight: 500;
   font-size: 0.9rem;
+  cursor: pointer;
+
   border: 1px solid var(--color-main);
 }
 
@@ -204,4 +215,26 @@ ul {
 .mobile-nav a:hover,
 .mobile-nav button:hover {
   background-color: #b7aec7;
+}
+
+.floatingNav {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0px 1px 10px #999;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .primary-navigation ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    padding-inline: 1rem;
+  }
 }

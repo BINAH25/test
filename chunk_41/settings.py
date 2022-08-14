@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-#z@qr86dj&)zn1dwxb^+@-xsp-lqx4n&b!#23)zch+29sbb3pl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'chunk_41.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'templates'],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
